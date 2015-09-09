@@ -25,7 +25,6 @@ public class Baton {
     float y1 = axisY - _length*sin(radians(angle));
     float y2 = axisY + _length*sin(radians(angle));
     
-    stroke(255);
     line(x1,y1,x2,y2);
     ellipse(x1,y1,_batonCircleRadius,_batonCircleRadius);
     ellipse(x2,y2,_batonCircleRadius,_batonCircleRadius);

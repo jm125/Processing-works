@@ -10,6 +10,8 @@ float axisY;
 
 Baton baton;
 Baton baton2;
+ColorCycle cycle;
+
 
 void setup() {
   size(500,500);
@@ -20,8 +22,9 @@ void setup() {
   baton = new Baton(100, centerX, centerY, 0);
   
   baton2 = new Baton(50, centerX/2, centerY/2, 5);
+  cycle = new ColorCycle();
   
-  colorMode(HSB);
+  colorMode(RGB);
 }
 
 void draw() {
@@ -32,8 +35,9 @@ void draw() {
   baton._speed *= decay;
   acceleration *= decay;
   
-  //background(angle%360,50, 100);
-  //background(255);
+  cycle.draw();
+  
+  stroke(cycle.r,0,cycle.b);
   
   baton.draw();
   baton2.draw();
